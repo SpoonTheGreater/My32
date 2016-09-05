@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBOutlet var mapView: MKMapView!
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +28,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let tileOverlay = overlay as? MKTileOverlay else {
+            return MKOverlayRenderer()
+        }
+        
+        return MKTileOverlayRenderer(tileOverlay: tileOverlay)
+    }
+    
+    
 }
 
