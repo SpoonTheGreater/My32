@@ -8,10 +8,11 @@
 
 import UIKit
 import MapKit
+import Mapbox
 
 class ViewController: UIViewController, MKMapViewDelegate {
     
-    @IBOutlet var mapView: MKMapView!
+    @IBOutlet var mapView: MGLMapView!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -36,6 +37,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return MKTileOverlayRenderer(tileOverlay: tileOverlay)
     }
     
-    
+    func tryHighlightLimerick()  {
+        
+    }
 }
 

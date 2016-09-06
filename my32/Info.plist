@@ -20,22 +20,33 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>f3580a7ffbb2322eac670a86ac880aa4a851b544</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1Ijoic3Bvb250aGVncmVhdGVyIiwiYSI6ImNpc3FkcXphYTAwMmIydG1yYTlma2tnam4ifQ.NY8Cen4uVqrkUvwtl95Erg</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>openstreetmap.ie</key>
-			<string></string>
-			<key>openstreetmap.org</key>
-			<string></string>
-		</dict>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>So you can see where you are!</string>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
