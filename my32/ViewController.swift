@@ -12,7 +12,7 @@ import Mapbox
 
 class ViewController: UIViewController, MKMapViewDelegate {
     
-    @IBOutlet var mapView: MGLMapView!
+    @IBOutlet var mapView: M32MapView!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -22,6 +22,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let testCounty = M32County();
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +31,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let tileOverlay = overlay as? MKTileOverlay else {
             return MKOverlayRenderer()
         }
