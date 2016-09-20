@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="my32" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="M32MapView" customModule="my32" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpp-ja-zuC">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="highlightLimerick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAz-oB-RRS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gpp-ja-zuC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="82z-Dz-lsa"/>
+                            <constraint firstItem="gpp-ja-zuC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ycI-dU-KSD"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="latitude">
                                 <real key="value" value="53.4129"/>
@@ -31,7 +43,14 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/spoonthegreater/cisrw2htf004j2xtlbra0sgfe"/>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="jvT-Lk-6z0"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="8bC-Xf-vdC" id="MqD-jC-5IB"/>
+                        <outlet property="showLimerick" destination="gpp-ja-zuC" id="7tr-uk-NRt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
